@@ -12,7 +12,16 @@ body {
     color: var(--R-red);
     background-color: var(--R-black);
 }
-/* NOT WORKING: BG COLOR */
+
+p {
+    font-size:1.3em;
+}
+
+header, h3 {
+    font-size:1.5em;
+    font-weight: bold;
+}
+
 #page-head {
     display:flex;
     flex: 2;
@@ -20,67 +29,176 @@ body {
     flex-wrap: wrap;
     flex-direction:row;
     justify-content:space-between;
+    padding:5em;
 }
-/* NOT WORKING:  BG COLOR*/
-nav {
+
+#navbar {
     display:flex;
-    align-self:flex-end;
     justify-content:space-between;
 }
-/* NOT WORKING: JUSTIFY */
-nav > a{
+
+#navbar > a{
     text-decoration:none;
-    color: var(--R-red);
+    color: var(--R-violet);
+    margin-left:1em;
+    margin-right:1em;
 }
+
+#navbar > a:hover {
+    color:var(--R-yellow);
+}
+
 
 .section{
     display:flex;
     flex: auto;
-    flex-flow:column;
+}
+
+.line-division {
+    display:flex;
+    flex-direction:row;
+}
+
+aside {
+    margin-right:2em;
+    margin-left:2em;
+    padding:3em;
 }
 
 .sites {
     display:flex;
     flex-direction:row;
-    flex-flow:column;
+    flex-wrap:wrap;
+}
+
+.sites-titles {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
 }
 
 .card {
-    position:flex;
-    height: 220px;
-    width: 650px;
+    display:flex;
+    height: 279px;
+    width: 444px;
+    margin: 1.5em;
+    border-radius: 5px;
+    border-color: var(--R-red);
+    justify-content: space-between;
 }
 
-.sites:nth-child(odd) > header{
-    align-self:flex-start;
+.double-card {
+    display:flex;
+    height:500px;
+    width: 799px;
+    margin:1.5em;
+    border-radius:5px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./gifs/ODETTE.gif);
+    background-size: cover;
+    background-position: center;
+}
+.double-card:hover {
+    opacity:.8;
 }
 
-.sites:nth-child(even) > header{
-    align-self:flex-end;
+#latest-site {
+    justify-content:center;
 }
+
+/* .sites-titles:nth-child(n+5)>header{
+    justify-content:flex-start;
+}
+
+.sites-titles:nth-child(4n+5)>header{
+    justify-content:flex-end;
+} */
 
 #site-1 {
     background-image: url(./gifs/ubeauty.gif);
     background-size:cover;
     background-position: center;
+    justify-content: flex;
 }
 
 #site-2{
     background-image:url(./gifs/nomade.gif);
     background-size:cover;
     background-position: center;
+    justify-content: flex-end;
+    align-items:flex-end;
 }
+
+#site-3 {
+    background-image: url(./gifs/baby-doll.gif);
+    background-size:cover;
+    background-position: center;
+    justify-content: flex;
+}
+
+#site-4{
+    background-image:url(./gifs/little-lies.gif);
+    background-size:cover;
+    background-position: center;
+    justify-content: flex-end;
+    align-items:flex-end;
+}
+
 
 #myPic {
     height:100px;
 }
 
-#work, #contact, #abt-me{
+#work, #contact, #abt-me, #sites{
     display:flex;
     flex-direction: row;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-aside {
-    margin-right:4em;
-    padding:3em;
+#about-img {
+    background-image: url(./gifs/aboutMePic.JPG);
+    background-size:cover;
+    background-position: center;
+}
+
+#about-info > p {
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info, .sites{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+
+.half-card {
+    padding:4em;
+}
+
+footer {
+    display:flex;
+    align-items: center;
+    padding:2em;
+    justify-content:space-around;
+}
+
+@media screen and (max-width:900px){
+    body, section, .sites, .contact-info,
+    .line-division, #work, #contact, #abt-me, 
+    #sites{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .double-card{
+        width:70vh;
+        height:45vh;
+    }
+    nav {
+        margin-top:8px;
+    }
 }
