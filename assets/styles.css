@@ -1,7 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab&display=swap');
 :root {
-    --R-black:#2222;
+    --R-black: #292626;
     --R-red:#CF3A2B;
     --R-blue: #3F7EDA;
     --R-yellow: #D5C64A;
     --R-violet: #B064CC;
+}
+
+body {
+    font-family:'Roboto Slab', serif;
+    color: var(--R-red);
+    background-color: var(--R-black);
+}
+/* NOT WORKING: BG COLOR */
+#page-head {
+    display:flex;
+    flex: 2;
+    background-color: var(--R-black);
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-between;
+}
+/* NOT WORKING:  BG COLOR*/
+nav {
+    display:flex;
+    align-self:flex-end;
+    justify-content:space-between;
+}
+/* NOT WORKING: JUSTIFY */
+nav > a{
+    text-decoration:none;
+    color: var(--R-red);
+}
+
+.section{
+    display:flex;
+    flex: auto;
+    flex-flow:column;
+}
+
+.sites {
+    display:flex;
+    flex-direction:row;
+    flex-flow:column;
+}
+
+.card {
+    position:flex;
+    height: 220px;
+    width: 650px;
+}
+
+.sites:nth-child(odd) > header{
+    align-self:flex-start;
+}
+
+.sites:nth-child(even) > header{
+    align-self:flex-end;
+}
+
+#site-1 {
+    background-image: url(./gifs/ubeauty.gif);
+    background-size:cover;
+    background-position: center;
+}
+
+#site-2{
+    background-image:url(./gifs/nomade.gif);
+    background-size:cover;
+    background-position: center;
+}
+
+#myPic {
+    height:100px;
+}
+
+#work, #contact, #abt-me{
+    display:flex;
+    flex-direction: row;
+}
+
+aside {
+    margin-right:4em;
+    padding:3em;
 }
